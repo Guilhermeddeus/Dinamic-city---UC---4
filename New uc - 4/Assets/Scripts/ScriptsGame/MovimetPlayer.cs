@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEditor.Animations;
+
+
 
 public class MovimetPlayer : MonoBehaviour
 {
@@ -12,10 +16,16 @@ public class MovimetPlayer : MonoBehaviour
     public int health = 10;
     public Transform player,inicio;
     float x, y, z;
+   
+
+
+
+
 
 
     private new Rigidbody2D rigidbody;
 
+   
     void Start()
     {
         Debug.Log("começa jogo");
