@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     private Transform playerPosition;
     public GameObject player;
+    public float height;
     void Awake()
     {
         playerPosition = player.transform;
@@ -16,6 +17,6 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);
+        transform.position = new Vector3(playerPosition.position.x, height, transform.position.z);
     }
 }
