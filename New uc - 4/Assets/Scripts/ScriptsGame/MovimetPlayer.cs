@@ -46,6 +46,15 @@ public class MovimetPlayer : MonoBehaviour
            
            
             rigidbody.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+          
+        }
+        if (DataControl.podepular)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Jumping", false);
+        }
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("Jumping", true);
         }
 
         rigidbody.AddForce(Vector2.down * gravity * Time.deltaTime);
