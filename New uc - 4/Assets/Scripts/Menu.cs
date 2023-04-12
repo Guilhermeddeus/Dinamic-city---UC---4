@@ -20,12 +20,14 @@ public class Menu : MonoBehaviour
 
     public void OpenOption()
     {
+        Debug.Log("Você Entrou nas opções");
         painelMenuInicial.SetActive(false);
         painelOpcoes.SetActive(true);
     }
 
     public void CloseOption()
     {
+        Debug.Log("Você saiu das opções");
         painelOpcoes.SetActive(false);
         painelMenuInicial.SetActive(true);
     }
