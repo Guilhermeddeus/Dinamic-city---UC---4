@@ -5,5 +5,5 @@ using UnityEngine;
 public class DataControl 
 {
     public static bool podepular;
-    public static bool podesalva;
+    public static bool podesalva,salvou;
 }

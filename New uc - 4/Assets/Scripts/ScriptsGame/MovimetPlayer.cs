@@ -72,6 +72,7 @@ public class MovimetPlayer : MonoBehaviour
             PlayerPrefs.SetFloat("x", player.transform.position.x);
             PlayerPrefs.SetFloat("y", player.transform.position.y);
             PlayerPrefs.SetFloat("z", player.transform.position.z);
+            DataControl.salvou = true;
         }
     }
     void Resete()

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Libera_Save : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player,banner;
+    public Sprite salve, nsalve;
     // Start is called before the first frame update
 
    private void OnTriggerEnter2D(Collider2D other)
@@ -15,6 +16,10 @@ public class Libera_Save : MonoBehaviour
         {
             Debug.Log("entro");
             DataControl.podesalva = true;
+            if(DataControl.salvou)
+            {
+                banner.GetComponent<SpriteRenderer>().sprite = salve;
+            }
         }
        
     }
