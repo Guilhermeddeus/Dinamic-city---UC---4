@@ -26,6 +26,7 @@ public class Pulo_Restart : MonoBehaviour
         {
 
             DataControl.podepular = true;
+            DataControl.skill = true;
             
 
 

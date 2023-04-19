@@ -10,7 +10,7 @@ public class MovimetPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speedPlayer;
+    public float speedPlayer,speed;
     public float jump;
     public float gravity = 10f;
     public int health = 10;
@@ -39,15 +39,41 @@ public class MovimetPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.right * speedPlayer * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space) && DataControl.podepular )
+        Movimetation();
+        Resete();   
+
+
+      
+    }
+    void Movimetation()
+    {
+        
+       transform.position += Vector3.right * speedPlayer * Time.deltaTime;
+       
+
+        if (Input.GetKeyDown(KeyCode.Space) && DataControl.podepular)
         {
-           
-           
+
+
             rigidbody.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
           
+           
+
         }
+        if (Input.GetKeyDown(KeyCode.RightArrow) && !DataControl.podepular && DataControl.skill)
+        {
+
+
+              rigidbody.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
+            
+            DataControl.skill = false;
+        
+
+
+
+        }
+
         if (DataControl.podepular)
         {
             gameObject.GetComponent<Animator>().SetBool("Jumping", false);
@@ -57,24 +83,10 @@ public class MovimetPlayer : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Jumping", true);
         }
 
-        rigidbody.AddForce(Vector2.down * gravity * Time.deltaTime);
-        Salva();
-        Resete();   
-
-
-      
+       rigidbody.AddForce(Vector2.down * gravity * Time.deltaTime);
     }
 
-    void Salva()
-    {
-        if(Input.GetKeyDown(KeyCode.G) && DataControl.podesalva)
-        {
-            PlayerPrefs.SetFloat("x", player.transform.position.x);
-            PlayerPrefs.SetFloat("y", player.transform.position.y);
-            PlayerPrefs.SetFloat("z", player.transform.position.z);
-            DataControl.salvou = true;
-        }
-    }
+  
     void Resete()
     {
         if(Input.GetKeyDown(KeyCode.R))

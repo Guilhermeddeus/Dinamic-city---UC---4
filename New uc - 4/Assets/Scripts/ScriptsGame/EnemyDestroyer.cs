@@ -22,8 +22,10 @@ public class EnemyDestroyer : MonoBehaviour
             y = PlayerPrefs.GetFloat("y");
             z = PlayerPrefs.GetFloat("z");
             ponto.position = new Vector3(x, y, z);
+            DataControl.skill = false;
+          
        
-            player.transform.position = ponto.position;
+           player.transform.position = ponto.position;
 
 
         }
