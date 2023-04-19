@@ -11,12 +11,12 @@ public class CameraFollow : MonoBehaviour
     public float height;
     void Awake()
     {
-        playerPosition = player.transform;
+        playerPosition = player.transform;// retornar a posicao do player
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(playerPosition.position.x, height, transform.position.z);
+        transform.position = new Vector3(playerPosition.position.x, height, transform.position.z);// fazer a camera seguir o player
     }
 }

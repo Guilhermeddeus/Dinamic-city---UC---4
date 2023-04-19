@@ -9,12 +9,12 @@ public class MenuMusic : MonoBehaviour
     public AudioSource sound;
     void Start()
     {
-        music.value = 0;
+        music.value = 0;// valor da musica recebe 0
     }
 
     // Update is called once per frame
     void Update()
     {
-        sound.GetComponent<AudioSource>().volume = music.value;
+        sound.GetComponent<AudioSource>().volume = music.value;// para poder mexer o volume com o slider
     }
 }
