@@ -9,12 +9,12 @@ public class DontDestroyer : MonoBehaviour
 
     private void Awake()
     {
-        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("GameMusic");
-        if (musicObj.Length > 1)
+        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("GameMusic");// guarda o audio source em uma lista 
+        if (musicObj.Length > 1)// se tiver mais de um objeto com a tag game music sera destruido para evitar problemas no audio
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);// destruindo o obj
         }
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);// para que quando apertar start o audiosource não ser destruido
 
 
     }
