@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 public class WinGame : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject player, banner;
-    public Sprite salve, nsalve;
-    public bool ativo;
+    public GameObject player;
+    
+    
 
     // Start is called before the first frame update
 

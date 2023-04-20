@@ -3161,7 +3161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515898142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 380.24, y: 0.2923, z: -0.000015258789}
+  m_LocalPosition: {x: 375.6, y: 0.2923, z: -0.000015258789}
   m_LocalScale: {x: 2.164574, y: 1.7455337, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6590,7 +6590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227887643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 356, y: 5.0147, z: 0}
+  m_LocalPosition: {x: 341.99, y: 5.0147, z: 0}
   m_LocalScale: {x: 3.3992727, y: 4.1946177, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11034,6 +11034,7 @@ GameObject:
   - component: {fileID: 3053525901214673845}
   - component: {fileID: 3053525901214673844}
   - component: {fileID: 4681595555619485562}
+  - component: {fileID: 4681595555619485563}
   m_Layer: 0
   m_Name: Banner A (1)
   m_TagString: Untagged
@@ -11067,3 +11068,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &4681595555619485563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4681595555619485561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe0d4056c70f8a4a992eaafa4bf84f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1508507085}
