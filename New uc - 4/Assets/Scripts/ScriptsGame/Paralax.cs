@@ -19,6 +19,7 @@ public class Paralax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //realoca o fundo pra origialPosition conforme atinge a posiçao endline e movimenta a sprite na velocidade speed 
         objectMove.transform.Translate( -speed * Time.deltaTime, 0,0);
         if(objectMove.transform.position.x<=endLine.transform.position.x) 
         {

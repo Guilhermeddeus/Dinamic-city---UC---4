@@ -16,6 +16,7 @@ public class EnemyDestroyer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //pega a ultima posição salva no playerprefs para q o player retorne ao ultimo ponto salvo
         if (collision.gameObject == player)
         {
             x = PlayerPrefs.GetFloat("x");

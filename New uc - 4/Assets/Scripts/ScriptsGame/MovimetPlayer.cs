@@ -28,6 +28,7 @@ public class MovimetPlayer : MonoBehaviour
    
     void Start()
     {
+        //começa o jogo slavando a posiçao inicial do payer no plaerprefs
         Debug.Log("começa jogo");
         rigidbody = GetComponent<Rigidbody2D>();
         x = PlayerPrefs.GetFloat("x");
@@ -48,6 +49,7 @@ public class MovimetPlayer : MonoBehaviour
     }
     void Movimetation()
     {
+        //condiciona o pulo do player atarsves da tecla junto a uma variavel boleana da classe Datacontrol
         
        transform.position += Vector3.right * speedPlayer * Time.deltaTime;
        
@@ -89,6 +91,7 @@ public class MovimetPlayer : MonoBehaviour
   
     void Resete()
     {
+      //reseta o jogo colocando a posição do player salva no payererprefs com o gameobject inicio
         if(Input.GetKeyDown(KeyCode.R))
         {
             PlayerPrefs.SetFloat("x", inicio.transform.position.x);

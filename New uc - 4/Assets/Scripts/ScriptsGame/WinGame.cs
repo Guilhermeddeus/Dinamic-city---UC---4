@@ -19,6 +19,7 @@ public class WinGame : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
+            //verifica se o player entrou em contato com o benner de chegada mmudando pra cena de vitoria
 
             SceneManager.LoadScene("Win");
         }

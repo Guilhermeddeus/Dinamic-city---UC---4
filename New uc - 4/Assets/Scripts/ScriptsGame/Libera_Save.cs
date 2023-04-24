@@ -17,7 +17,7 @@ public class Libera_Save : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-      
+        //verifica colisao com salvepoint liberando a flag  DataControl.podesalva = true;
 
         if (other.gameObject.tag == "Player")
         {
@@ -35,7 +35,7 @@ public class Libera_Save : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
        
-
+        //verifica saida da colisao para bloqear a posibildade de salvar 
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("saiu");
@@ -58,6 +58,7 @@ public class Libera_Save : MonoBehaviour
     //}
     void Salva()
     {
+        //salva posiçao do player no plaerprefs em gado de precionar ceta para baix estando na erea do salve point
         if (Input.GetKeyDown(KeyCode.DownArrow) && DataControl.podesalva)
         {
             PlayerPrefs.SetFloat("x", player.transform.position.x);
